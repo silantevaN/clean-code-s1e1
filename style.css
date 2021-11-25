@@ -28,11 +28,11 @@ button {
   text-align: right;
 }
 
-.header .matrix-img {
+.header .header__matrix-img {
   width: 100%;
 }
 
-.header .more-inf {
+.header .header__more-inf {
   font-family: fantasy, cursive;
 }
 
@@ -44,21 +44,22 @@ button {
 
 }
 
-.main {
+.todo-list {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
 
-.task-label,
+.list-tasks__task-label,
 .task {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
-.add-task-wrapper {
+.todo-list__add-task {
   display: flex;
+  margin-top: 20px;
 }
 
 .list-tasks {
@@ -66,7 +67,7 @@ button {
   padding: 0px;
 }
 
-.button {
+.todo-list__button {
   background: none;
   border: 0px;
   color: #888;
@@ -76,13 +77,12 @@ button {
   cursor: pointer;
 }
 
-.button:hover {
+.todo-list__button:hover {
   color: #3a3A3a;
 }
 
-/* Heading */
-.heading,
-.new-task-label {
+/* title */
+.todo-list__title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -109,18 +109,12 @@ button {
   color: #333;
 }
 
-/* New Task */
-.new-task-label {
-  display: block;
-  margin: 0 0 20px;
-}
-
 .task {
   width: 318px;
 }
 
 /* Task list */
-.list-item {
+.list-tasks__item {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -130,51 +124,51 @@ button {
   align-items: center;
 }
 
-.list-item > .wrapper {
+.list-tasks__item > .wrapper {
   vertical-align: middle;
 }
 
-.list-item > .checkbox {
+.list-tasks__item > .list-tasks__checkbox {
   margin: 0 10px;
 }
 
-.list-item > .task-label {
+.list-tasks__item > .list-tasks__task-label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-.list-item > .task {
+.list-tasks__item > .task {
   width: 226px;
 }
 
-.delete .delete-img {
+.todo-list__button_delete .todo-list__delete-img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
 
-.delete .delete-img:hover {
+.todo-list__button_delete .todo-list__delete-img:hover {
   transform: rotateZ(0);
 }
 
 /* Completed */
-.list-tasks#completed-tasks .task-label {
+.list-tasks#completed-tasks .list-tasks__task-label {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.list-tasks .list-item .task {
+.list-tasks .list-tasks__item .task {
   display: none;
 }
 
-.list-tasks .list-item.edit-mode .task {
+.list-tasks .list-tasks__item.list-tasks__item_edit-mode .task {
   display: inline-block;
   width: 224px;
 }
 
-.list-tasks .list-item.edit-mode .task-label {
+.list-tasks .list-tasks__item.list-tasks__item_edit-mode .list-tasks__task-label {
   display: none;
 }
